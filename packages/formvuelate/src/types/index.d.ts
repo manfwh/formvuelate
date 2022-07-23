@@ -28,7 +28,7 @@ export interface BaseSchemaReturns {
 
 export declare function useSchemaForm<
   TValues extends Record<string, any> = Record<string, any>
->(initialFormValues?: TValues): { formModel: TValues };
+>(initialFormValues?: TValues): { formModel: TValues; updateFormModel: (modelPath: string, value: any) => void };
 
 export type PluginFunction = { extend?: PluginExtenderFunction } & ((
   baseReturns: BaseSchemaReturns
